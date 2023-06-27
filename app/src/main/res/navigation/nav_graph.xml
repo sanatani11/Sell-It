@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.sellit.Fragments.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/addFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="Latitude"
+            app:argType="string" />
+        <argument
+            android:name="Longitude"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sellit.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+<!--        <action-->
+<!--            android:id="@+id/action_homeFragment_to_showLocationFragment"-->
+<!--            app:destination="@id/showLocationFragment"-->
+<!--            app:enterAnim="@android:anim/fade_in"-->
+<!--            app:exitAnim="@android:anim/fade_out"-->
+<!--            app:popEnterAnim="@android:anim/fade_in"-->
+<!--            app:popExitAnim="@android:anim/fade_out" />-->
+        <action
+            android:id="@+id/action_homeFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/propertyFragment"
+        android:name="com.example.sellit.Fragments.PropertyFragment"
+        android:label="fragment_property"
+        tools:layout="@layout/fragment_property" >
+        <action
+            android:id="@+id/action_propertyFragment_to_editFragment"
+            app:destination="@id/editFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.sellit.Fragments.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.sellit.Fragments.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_addFragment"
+            app:destination="@id/addFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/addFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="Lat"
+            app:argType="string" />
+        <argument
+            android:name="Lng"
+            app:argType="string" />
+        <argument
+            android:name="calledFrom"
+            app:argType="string" />
+    </fragment>
+</navigation>

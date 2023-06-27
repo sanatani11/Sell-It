@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "615621648342",
+    "project_id": "sellit-38277",
+    "storage_bucket": "sellit-38277.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615621648342:android:7d4b88a4e3b9feda9f8e77",
+        "android_client_info": {
+          "package_name": "com.example.sellit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615621648342-uml69joc43kl66999g1cchrms30oe1sd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXvZ31SONrir0g7DlQ2xCjJsTJ_xpb9oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615621648342-uml69joc43kl66999g1cchrms30oe1sd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
