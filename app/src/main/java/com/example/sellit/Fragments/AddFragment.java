@@ -11,6 +11,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -89,6 +90,7 @@ public class AddFragment extends Fragment {
                 String image_name_for_room = System.currentTimeMillis()+"."+getExtension(image_uri);
                 propertyFragmentViewModel.add_property(adress,phoneno,details,price,image_name,image_uri,Lat,Lng);
                 RoomViewModel.insert_property_offline(phoneno,adress,price,details,image_name_for_room,image_uri,Lat,Lng);
+//                Toast.makeText(getActivity().getApplicationContext(), "Saved Successfully", Toast.LENGTH_SHORT).show();
             }
         });
     }

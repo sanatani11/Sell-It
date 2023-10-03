@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.project1.R;
 import com.example.sellit.data_classes.registered_user_info;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -62,14 +63,17 @@ public class register extends AppCompatActivity {
                                                         Toast.makeText(register.this, "succesfullyregsitered", Toast.LENGTH_LONG).show();
                                                         startActivity(new Intent(register.this, MainActivity.class));
                                                         finish();
+
                                                     }
                                                     else{
-                                                        Toast.makeText(register.this, "registration failed", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(register.this, task.toString(), Toast.LENGTH_LONG).show();
                                                     }
                                                 }
+
                                             });
                                         }
                                         else{
+
                                             Toast.makeText(register.this, "registration failed", Toast.LENGTH_LONG).show();
                                         }
                                     }
